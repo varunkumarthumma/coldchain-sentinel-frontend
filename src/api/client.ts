@@ -12,8 +12,8 @@ import {
   HealthResponse,
 } from './types';
 
-
-const BASE_URL = '/api';
+const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
+const BASE_URL = API_BASE ? `${API_BASE}/api` : '/api';
 
 async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) {

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Sensor, SensorType } from '../api/types';
 import { api } from '../api/client';
@@ -461,11 +462,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('NORMAL')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'NORMAL'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'NORMAL'
                   ? 'border-emerald-500 bg-emerald-50 text-emerald-900 ring-1 ring-emerald-500 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-emerald-700 flex items-center gap-1.5">
                 <CheckCircle2 className="h-3.5 w-3.5" /> Normal Baseline
@@ -476,11 +476,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('TEMP_HEAT_EXCURSION')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'TEMP_HEAT_EXCURSION'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'TEMP_HEAT_EXCURSION'
                   ? 'border-rose-500 bg-rose-50 text-rose-900 ring-1 ring-rose-500 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-rose-700 flex items-center gap-1.5">
                 <Flame className="h-3.5 w-3.5" /> Thermal Excursion
@@ -491,11 +490,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('TEMP_CHILL_EXCURSION')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'TEMP_CHILL_EXCURSION'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'TEMP_CHILL_EXCURSION'
                   ? 'border-sky-500 bg-sky-50 text-sky-900 ring-1 ring-sky-500 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-sky-700 flex items-center gap-1.5">
                 <Snowflake className="h-3.5 w-3.5" /> Chilling Excursion
@@ -506,11 +504,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('HUMIDITY_LOW_EXCURSION')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'HUMIDITY_LOW_EXCURSION'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'HUMIDITY_LOW_EXCURSION'
                   ? 'border-amber-500 bg-amber-50 text-amber-900 ring-1 ring-amber-500 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-amber-700 flex items-center gap-1.5">
                 <Droplets className="h-3.5 w-3.5" /> Low Humidity
@@ -521,11 +518,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('HUMIDITY_HIGH_EXCURSION')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'HUMIDITY_HIGH_EXCURSION'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'HUMIDITY_HIGH_EXCURSION'
                   ? 'border-purple-500 bg-purple-50 text-purple-900 ring-1 ring-purple-500 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-purple-700 flex items-center gap-1.5">
                 <Droplets className="h-3.5 w-3.5" /> High Humidity
@@ -536,11 +532,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('RECOVERY_CYCLE')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'RECOVERY_CYCLE'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'RECOVERY_CYCLE'
                   ? 'border-blue-500 bg-blue-50 text-blue-900 ring-1 ring-blue-500 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-blue-700 flex items-center gap-1.5">
                 <RotateCcw className="h-3.5 w-3.5" /> Recovery Cycle
@@ -551,11 +546,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('TELEMETRY_GAP')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'TELEMETRY_GAP'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'TELEMETRY_GAP'
                   ? 'border-indigo-500 bg-indigo-50 text-indigo-900 ring-1 ring-indigo-500 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-indigo-700 flex items-center gap-1.5">
                 <Layers className="h-3.5 w-3.5" /> Telemetry Gap
@@ -566,11 +560,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             <button
               onClick={() => setScenario('MANUAL_CUSTOM')}
               disabled={isRunning}
-              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${
-                scenario === 'MANUAL_CUSTOM'
+              className={`rounded-lg p-2.5 text-left text-xs transition-all border ${scenario === 'MANUAL_CUSTOM'
                   ? 'border-slate-600 bg-slate-100 text-slate-900 ring-1 ring-slate-600 font-semibold'
                   : 'border-slate-200 bg-slate-50/50 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50'
-              }`}
+                }`}
             >
               <div className="font-semibold text-slate-700 flex items-center gap-1.5">
                 <Send className="h-3.5 w-3.5" /> Manual Custom
@@ -678,9 +671,8 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             </div>
             <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
               <div
-                className={`h-1.5 transition-all duration-300 ${
-                  isRunning ? 'bg-blue-600' : isPaused ? 'bg-amber-500' : 'bg-slate-400'
-                }`}
+                className={`h-1.5 transition-all duration-300 ${isRunning ? 'bg-blue-600' : isPaused ? 'bg-amber-500' : 'bg-slate-400'
+                  }`}
                 style={{
                   width: `${Math.min(100, (emittedCount / maxReadingsLimit) * 100)}%`,
                 }}
@@ -768,11 +760,10 @@ export const TelemetrySimulatorPanel: React.FC<TelemetrySimulatorPanelProps> = (
             {recentLogs.map((log) => (
               <div
                 key={log.id}
-                className={`flex items-center justify-between p-2 rounded-lg border text-xs font-mono transition-all ${
-                  log.alertTriggered
+                className={`flex items-center justify-between p-2 rounded-lg border text-xs font-mono transition-all ${log.alertTriggered
                     ? 'border-rose-200 bg-rose-50/70 text-rose-900'
                     : 'border-slate-200 bg-slate-50 text-slate-700'
-                }`}
+                  }`}
               >
                 <div className="flex items-center gap-2">
                   <span className="text-slate-400 text-[10px]">{log.timestamp}</span>
