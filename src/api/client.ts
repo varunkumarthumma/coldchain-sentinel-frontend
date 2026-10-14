@@ -12,8 +12,14 @@ import {
   HealthResponse,
 } from './types';
 
-const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
-const BASE_URL = API_BASE ? `${API_BASE}/api` : '/api';
+const getApiBaseUrl = (): string => {
+  const envUrl = (import.meta.env.VITE_API_URL || 'https://coldchain-sentinel-backend-1.onrender.com').trim().replace(/\/+$/, '');
+  if (!envUrl) return '/api';
+  if (envUrl.endsWith('/api')) return envUrl;
+  return `${envUrl}/api`;
+};
+
+const BASE_URL = getApiBaseUrl();
 
 async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) {
